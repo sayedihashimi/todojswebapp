@@ -1,4 +1,6 @@
 ﻿import React, { useState } from 'react'
+import './Todo.css'
+
 function Todo() {
     const [tasks, setTasks] = useState([
         "Drink some coffee",
@@ -39,9 +41,9 @@ function Todo() {
     }
 
     return (
-        <div>
+        <div id="main">
             <h1>TODO</h1>
-            <div>
+            <div id="todo-input">
                 <input
                     type="text"
                     placeholder="Enter a task"
@@ -53,17 +55,17 @@ function Todo() {
                     Add
                 </button>
             </div>
-            <ol>
+            <ol id="todo-list">
                 {tasks.map((task, index) =>
                     <li key={index}>
                         <span className="text">{task}</span>
-                        <button onClick={()=>deleteTask(index)}>
+                        <button className="delete-button" onClick={()=>deleteTask(index)}>
                             🗑️
                         </button>
-                        <button onClick={() => moveTaskUp(index)}>
+                        <button className="up-button" onClick={() => moveTaskUp(index)}>
                             ⇧
                         </button>
-                        <button onClick={() => moveTaskDown(index)}>
+                        <button className="down-button" onClick={() => moveTaskDown(index)}>
                             ⇩
                         </button>
                     </li>
