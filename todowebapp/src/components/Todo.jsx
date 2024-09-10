@@ -1,6 +1,14 @@
 ﻿import React, { useState } from 'react'
 import './Todo.css'
+import TodoItem from './TodoItem'
 
+/**
+ * Todo component represents the main TODO list application.
+ * It allows users to add new tasks, delete tasks, and move tasks up or down in the list.
+ * The component maintains the state of the task list and the new task input.
+ *
+ * @returns {JSX.Element}
+ */
 function Todo() {
     const [tasks, setTasks] = useState([
         "Drink some coffee",
@@ -57,18 +65,13 @@ function Todo() {
             </div>
             <ol id="todo-list">
                 {tasks.map((task, index) =>
-                    <li key={index}>
-                        <span className="text">{task}</span>
-                        <button className="delete-button" onClick={()=>deleteTask(index)}>
-                            🗑️
-                        </button>
-                        <button className="up-button" onClick={() => moveTaskUp(index)}>
-                            ⇧
-                        </button>
-                        <button className="down-button" onClick={() => moveTaskDown(index)}>
-                            ⇩
-                        </button>
-                    </li>
+                    <TodoItem
+                        key={index}
+                        task={task}
+                        deleteTaskCallback={() => deleteTask(index)}
+                        moveTaskUpCallback={() => moveTaskUp(index)}
+                        moveTaskDownCallback={()=>moveTaskDown(index)}
+                    />
                 )}
             </ol>
         </div>
