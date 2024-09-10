@@ -1,6 +1,7 @@
 ﻿import React, { useState } from 'react'
 import './Todo.css'
 import TodoItem from './TodoItem'
+import { v4 as uuidv4 } from 'uuid';
 
 /**
  * Todo component represents the main TODO list application.
@@ -11,9 +12,9 @@ import TodoItem from './TodoItem'
  */
 function Todo() {
     const [tasks, setTasks] = useState([
-        "Drink some coffee",
-        "Create a TODO app",
-        "Drink some more coffee"]);
+        {id: uuidv4(), text: "Drink some coffee"},
+        {id: uuidv4(), text: "Create a TODO app"},
+        {id: uuidv4(), text: "Drink some more coffee"}]);
     const [newTask, setNewTask] = useState("");
 
     function handleInputChange(event) {
@@ -22,13 +23,13 @@ function Todo() {
 
     function addTask() {
         if (newTask.trim() !== "") {
-            setTasks(t => [...t, newTask]);
+            setTasks(t => [...t, { id:uuidv4(), text:newTask}]);
             setNewTask("");
         }
     }
 
-    function deleteTask(index) {
-        const updatedTasks = tasks.filter((_, i) => i !== index);
+    function deleteTask(id) {
+        const updatedTasks = tasks.filter(task=>task.id !== id);
         setTasks(updatedTasks);
     }
 
@@ -66,9 +67,9 @@ function Todo() {
             <ol id="todo-list">
                 {tasks.map((task, index) =>
                     <TodoItem
-                        key={index}
-                        task={task}
-                        deleteTaskCallback={() => deleteTask(index)}
+                        key={task.id}
+                        task={task.text}
+                        deleteTaskCallback={() => deleteTask(task.id)}
                         moveTaskUpCallback={() => moveTaskUp(index)}
                         moveTaskDownCallback={()=>moveTaskDown(index)}
                     />
