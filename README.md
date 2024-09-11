@@ -1,4 +1,4 @@
-This is a simple TODO app built with using **[Visual Studio JavaScript and TypeScript](https://learn.microsoft.com/en-us/visualstudio/javascript/javascript-in-visual-studio?view=vs-2022)**.
+This is a simple TODO app built with using **[JavaScript in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/javascript/javascript-in-visual-studio?view=vs-2022)**.
 This front-end uses React and Vite.
 
 This is a demo project showing how you can create React apps in Visual Studio. The todo items are stored in memory in this sample app.
