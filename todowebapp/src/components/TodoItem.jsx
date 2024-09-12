@@ -9,7 +9,6 @@
  * @param {function} props.deleteTaskCallback - Callback function to delete the task.
  * @param {function} props.moveTaskUpCallback - Callback function to move the task up in the list.
  * @param {function} props.moveTaskDownCallback - Callback function to move the task down in the list.
- * @returns {JSX.Element}
  */
 function TodoItem({ task, deleteTaskCallback, moveTaskUpCallback, moveTaskDownCallback }) {
   return (

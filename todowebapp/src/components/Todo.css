@@ -18,68 +18,68 @@ h1 {
     margin-bottom: 1.25rem;
 }
 
-    #todo-input input {
-        flex: 1;
-        padding: 0.625rem;
-        border: 0.0625rem solid #333;
-        border-radius: 0.25rem;
-        margin-right: 0.625rem;
-        background-color: #2c2c2c;
-        color: #e0e0e0;
-    }
+#todo-input input {
+    flex: 1;
+    padding: 0.625rem;
+    border: 0.0625rem solid #333;
+    border-radius: 0.25rem;
+    margin-right: 0.625rem;
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
 
-    #todo-input .add-button {
-        padding: 0.625rem 1.25rem;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 0.25rem;
-        cursor: pointer;
-    }
+#todo-input .add-button {
+    padding: 0.625rem 1.25rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
 
-        #todo-input .add-button:hover {
-            background-color: #0056b3;
-        }
+#todo-input .add-button:hover {
+    background-color: #0056b3;
+}
 
 #todo-list {
     list-style-type: none;
     padding: 0;
 }
 
-    #todo-list li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.625rem;
-        border-bottom: 0.0625rem solid #333;
-    }
+#todo-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.625rem;
+    border-bottom: 0.0625rem solid #333;
+}
 
-        #todo-list li:last-child {
-            border-bottom: none;
-        }
+#todo-list li:last-child {
+    border-bottom: none;
+}
 
-    #todo-list .text {
-        flex: 1;
-    }
+#todo-list .text {
+    flex: 1;
+}
 
-    #todo-list button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1rem;
-        margin-left: 0.625rem;
-        color: #e0e0e0;
-    }
+#todo-list button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.625rem;
+    color: #e0e0e0;
+}
 
-        #todo-list button:hover {
-            color: #007bff;
-        }
+#todo-list button:hover {
+    color: #007bff;
+}
 
-        #todo-list button.delete-button {
-            color: #ff4d4d;
-        }
+#todo-list button.delete-button {
+    color: #ff4d4d;
+}
 
-        #todo-list button.up-button,
-        #todo-list button.down-button {
-            color: #4caf50;
-        }
+#todo-list button.up-button,
+#todo-list button.down-button {
+    color: #4caf50;
+}

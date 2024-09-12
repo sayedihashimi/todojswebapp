@@ -1,8 +1,6 @@
 This is a simple TODO app built with using **[JavaScript in Visual Studio](https://learn.microsoft.com/en-us/visualstudio/javascript/javascript-in-visual-studio?view=vs-2022)**.
 This front-end uses React and Vite.
 
-This is a demo project showing how you can create React apps in Visual Studio. The todo items are stored in memory in this sample app.
-
 ## Get started in Visual Studio 2022
 To get started with this in Visual Studio follow the steps below.
 
@@ -17,18 +15,13 @@ To get started with this in Visual Studio follow the steps below.
 - **Delete Tasks**: Users can remove tasks from the list.
 - **Interactive UI**: Buttons allow task management directly from the interface.
 
-## Get started with the CLI
+## Get started outside of Visual Studio
 
-Ensure that you have the following components installed.
-
-- nodejs
-- npm
-
-To run the app execute the commands below.
+Make sure you have the latest stable version of Node installed. Then run the commands below.
 
 ```bash
 > cd todojswebapp
-> npm install
+> npm ci
 > npm run dev
 ```
 

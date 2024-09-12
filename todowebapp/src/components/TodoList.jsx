@@ -1,35 +1,33 @@
-﻿import React, { useState } from 'react'
-import './Todo.css'
-import TodoItem from './TodoItem'
+﻿import { useState } from 'react';
+import './Todo.css';
+import TodoItem from './TodoItem';
 import { v4 as uuidv4 } from 'uuid';
 
 /**
  * Todo component represents the main TODO list application.
  * It allows users to add new tasks, delete tasks, and move tasks up or down in the list.
  * The component maintains the state of the task list and the new task input.
- *
- * @returns {JSX.Element}
  */
-function Todo() {
+function TodoList() {
     const [tasks, setTasks] = useState([
-        { id: '233f07fe-53b1-4c0e-a280-795241439c9e', text: "Drink some coffee"},
-        { id: '859ebe1b-8c5e-4a77-a525-70045f6a7f3b', text: "Create a TODO app"},
-        { id: '130fc1f4-1063-4f5a-b4f4-88dda385e04f', text: "Drink some more coffee"}]);
-    const [newTask, setNewTask] = useState("");
+        { id: '233f07fe-53b1-4c0e-a280-795241439c9e', text: 'Drink some coffee'},
+        { id: '859ebe1b-8c5e-4a77-a525-70045f6a7f3b', text: 'Create a TODO app'},
+        { id: '130fc1f4-1063-4f5a-b4f4-88dda385e04f', text: 'Drink some more coffee'}]);
+    const [newTaskText, setNewTaskText] = useState('');
 
     function handleInputChange(event) {
-        setNewTask(event.target.value);
+        setNewTaskText(event.target.value);
     }
 
     function addTask() {
-        if (newTask.trim() !== "") {
-            setTasks(t => [...t, { id:uuidv4(), text:newTask}]);
-            setNewTask("");
+        if (newTaskText.trim()) {
+            setTasks(t => [...t, { id:uuidv4(), text:newTaskText}]);
+            setNewTaskText('');
         }
     }
 
     function deleteTask(id) {
-        const updatedTasks = tasks.filter(task=>task.id !== id);
+        const updatedTasks = tasks.filter(task=>task.id != id);
         setTasks(updatedTasks);
     }
 
@@ -56,7 +54,7 @@ function Todo() {
                 <input
                     type="text"
                     placeholder="Enter a task"
-                    value={newTask}
+                    value={newTaskText}
                     onChange={handleInputChange} />
                 <button
                     className="add-button"
@@ -79,4 +77,4 @@ function Todo() {
     );
 }
 
-export default Todo;
+export default TodoList;
