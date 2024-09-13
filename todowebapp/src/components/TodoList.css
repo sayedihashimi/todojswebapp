@@ -75,7 +75,7 @@ h1 {
     color: #007bff;
 }
 
-#todo-list button.delete-button {
+.todo-list li button.delete-button {
     color: #ff4d4d;
 }
 
