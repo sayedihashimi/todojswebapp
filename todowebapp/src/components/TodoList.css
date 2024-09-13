@@ -62,7 +62,7 @@
     flex: 1;
 }
 
-#todo-list button {
+.todo-list li button {
     background: none;
     border: none;
     cursor: pointer;
