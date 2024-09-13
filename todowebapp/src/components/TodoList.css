@@ -58,7 +58,7 @@
     border-bottom: none;
 }
 
-#todo-list .text {
+.todo-list .text {
     flex: 1;
 }
 
