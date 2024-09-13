@@ -50,7 +50,7 @@ function TodoList() {
     }
 
     return (
-        <div id="main">
+        <article class="todo-list" aria-label="task list manager">
             <h1>TODO</h1>
             <div id="todo-input">
                 <input
