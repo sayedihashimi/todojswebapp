@@ -75,7 +75,7 @@ function TodoList() {
                     />
                 )}
             </ol>
-        </div>
+        </article>
     );
 }
 
