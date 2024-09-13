@@ -79,7 +79,7 @@ h1 {
     color: #ff4d4d;
 }
 
-#todo-list button.up-button,
-#todo-list button.down-button {
+.todo-list li button.up-button,
+.todo-list li button.down-button {
     color: #4caf50;
 }
