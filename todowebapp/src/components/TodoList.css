@@ -71,7 +71,7 @@ h1 {
     color: #e0e0e0;
 }
 
-#todo-list button:hover {
+.todo-list li button:hover {
     color: #007bff;
 }
 
