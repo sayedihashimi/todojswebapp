@@ -64,7 +64,7 @@ function TodoList() {
                     Add
                 </button>
             </div>
-            <ol id="todo-list">
+            <ol aria-label="task list">
                 {tasks.map((task, index) =>
                     <TodoItem
                         key={task.id}
