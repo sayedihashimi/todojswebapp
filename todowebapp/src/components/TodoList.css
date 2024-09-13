@@ -7,7 +7,7 @@
     max-width: 25rem;
 }
 
-h1 {
+.todo-list h1 {
     text-align: center;
     color: #e0e0e0;
 }
