@@ -54,7 +54,7 @@
     border-bottom: 0.0625rem solid #333;
 }
 
-#todo-list li:last-child {
+.todo-list li:last-child {
     border-bottom: none;
 }
 
