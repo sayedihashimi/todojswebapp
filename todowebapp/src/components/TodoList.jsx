@@ -51,19 +51,21 @@ function TodoList() {
 
     return (
         <article class="todo-list" aria-label="task list manager">
-            <h1>TODO</h1>
-            <div id="todo-input">
-                <input
-                    type="text"
-                    placeholder="Enter a task"
-                    value={newTaskText}
-                    onChange={handleInputChange} />
-                <button
-                    className="add-button"
-                    onClick={addTask}>
-                    Add
-                </button>
-            </div>
+            <header>
+                <h1>TODO</h1>
+                <div class="todo-input">
+                    <input
+                        type="text"
+                        placeholder="Enter a task"
+                        value={newTaskText}
+                        onChange={handleInputChange} />
+                    <button
+                        className="add-button"
+                        onClick={addTask}>
+                        Add
+                    </button>
+                </div>
+            </header>
             <ol aria-label="task list">
                 {tasks.map((task, index) =>
                     <TodoItem
