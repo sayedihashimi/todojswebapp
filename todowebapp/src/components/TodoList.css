@@ -41,7 +41,7 @@
     background-color: #0056b3;
 }
 
-#todo-list {
+.todo-list ol {
     list-style-type: none;
     padding: 0;
 }
