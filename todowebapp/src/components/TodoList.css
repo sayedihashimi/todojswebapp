@@ -28,7 +28,7 @@
     color: #e0e0e0;
 }
 
-#todo-input .add-button {
+.todo-input .add-button {
     padding: 0.625rem 1.25rem;
     background-color: #007bff;
     color: #fff;
