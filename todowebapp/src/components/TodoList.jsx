@@ -1,7 +1,12 @@
 ﻿import { useState } from 'react';
-import './Todo.css';
+import './TodoList.css';
 import TodoItem from './TodoItem';
-import { v4 as uuidv4 } from 'uuid';
+
+const initialTasks = [
+    { id: self.crypto.randomUUID(), text: 'Drink some coffee' },
+    { id: self.crypto.randomUUID(), text: 'Create a TODO app' },
+    { id: self.crypto.randomUUID(), text: 'Drink some more coffee' }
+];
 
 /**
  * Todo component represents the main TODO list application.
@@ -9,10 +14,7 @@ import { v4 as uuidv4 } from 'uuid';
  * The component maintains the state of the task list and the new task input.
  */
 function TodoList() {
-    const [tasks, setTasks] = useState([
-        { id: '233f07fe-53b1-4c0e-a280-795241439c9e', text: 'Drink some coffee'},
-        { id: '859ebe1b-8c5e-4a77-a525-70045f6a7f3b', text: 'Create a TODO app'},
-        { id: '130fc1f4-1063-4f5a-b4f4-88dda385e04f', text: 'Drink some more coffee'}]);
+    const [tasks, setTasks] = useState(initialTasks);
     const [newTaskText, setNewTaskText] = useState('');
 
     function handleInputChange(event) {
@@ -21,7 +23,7 @@ function TodoList() {
 
     function addTask() {
         if (newTaskText.trim()) {
-            setTasks(t => [...t, { id:uuidv4(), text:newTaskText}]);
+            setTasks(t => [...t, { id: self.crypto.randomUUID(), text:newTaskText}]);
             setNewTaskText('');
         }
     }
