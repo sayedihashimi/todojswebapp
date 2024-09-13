@@ -1,4 +1,4 @@
-main {
+.todo-list {
     background-color: #1e1e1e;
     padding: 1.25rem;
     border-radius: 0.5rem;
@@ -7,18 +7,18 @@ main {
     max-width: 25rem;
 }
 
-h1 {
+.todo-list h1 {
     text-align: center;
     color: #e0e0e0;
 }
 
-#todo-input {
+.todo-input {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.25rem;
 }
 
-#todo-input input {
+.todo-input input {
     flex: 1;
     padding: 0.625rem;
     border: 0.0625rem solid #333;
@@ -28,7 +28,7 @@ h1 {
     color: #e0e0e0;
 }
 
-#todo-input .add-button {
+.todo-input .add-button {
     padding: 0.625rem 1.25rem;
     background-color: #007bff;
     color: #fff;
@@ -37,11 +37,11 @@ h1 {
     cursor: pointer;
 }
 
-#todo-input .add-button:hover {
+.todo-input .add-button:hover {
     background-color: #0056b3;
 }
 
-#todo-list {
+.todo-list ol {
     list-style-type: none;
     padding: 0;
 }
@@ -54,15 +54,15 @@ h1 {
     border-bottom: 0.0625rem solid #333;
 }
 
-#todo-list li:last-child {
+.todo-list li:last-child {
     border-bottom: none;
 }
 
-#todo-list .text {
+.todo-list .text {
     flex: 1;
 }
 
-#todo-list button {
+.todo-list li button {
     background: none;
     border: none;
     cursor: pointer;
@@ -71,15 +71,15 @@ h1 {
     color: #e0e0e0;
 }
 
-#todo-list button:hover {
+.todo-list li button:hover {
     color: #007bff;
 }
 
-#todo-list button.delete-button {
+.todo-list li button.delete-button {
     color: #ff4d4d;
 }
 
-#todo-list button.up-button,
-#todo-list button.down-button {
+.todo-list li button.up-button,
+.todo-list li button.down-button {
     color: #4caf50;
 }

@@ -51,23 +51,23 @@ function TodoList() {
     }
 
     return (
-        <main>
-            <h1>TODO</h1>
-            <form id="todo-input" onSubmit={addTask} aria-controls="todo-list">
-                <input
-                    type="text"
-                    required
-                    placeholder="Enter a task"
-                    value={newTaskText}
-                    aria-label="Task text" 
-                    onChange={handleInputChange} />
-                <button
-                    className="add-button"
-                    aria-label="Add task">
-                    Add
-                </button>
-            </form>
-            <ol aria-live="polite" id="todo-list">
+        <article class="todo-list" aria-label="task list manager">
+            <header>
+                <h1>TODO</h1>
+                <div class="todo-input">
+                    <input
+                        type="text"
+                        placeholder="Enter a task"
+                        value={newTaskText}
+                        onChange={handleInputChange} />
+                    <button
+                        className="add-button"
+                        onClick={addTask}>
+                        Add
+                    </button>
+                </div>
+            </header>
+            <ol aria-label="task list">
                 {tasks.map((task, index) =>
                     <TodoItem
                         key={task.id}
@@ -78,7 +78,7 @@ function TodoList() {
                     />
                 )}
             </ol>
-        </main>
+        </article>
     );
 }
 
