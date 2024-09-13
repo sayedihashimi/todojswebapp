@@ -21,11 +21,12 @@ function TodoList() {
         setNewTaskText(event.target.value);
     }
 
-    function addTask() {
+    function addTask(event) {
         if (newTaskText.trim()) {
             setTasks(t => [...t, { id: self.crypto.randomUUID(), text:newTaskText}]);
             setNewTaskText('');
         }
+        event.preventDefault();
     }
 
     function deleteTask(id) {

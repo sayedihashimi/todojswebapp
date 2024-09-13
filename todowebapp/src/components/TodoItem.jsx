@@ -12,15 +12,27 @@
  */
 function TodoItem({ task, deleteTaskCallback, moveTaskUpCallback, moveTaskDownCallback }) {
   return (
-      <li>
+      <li aria-label="task">
           <span className="text">{task}</span>
-          <button className="delete-button" onClick={() => deleteTaskCallback()}>
+          <button
+              type="button"
+              aria-label="Delete task"
+              className="delete-button"
+              onClick={() => deleteTaskCallback()}>
               🗑️
           </button>
-          <button className="up-button" onClick={() => moveTaskUpCallback()}>
+          <button
+              type="button"
+              aria-label="Move task up"
+              className="up-button"
+              onClick={() => moveTaskUpCallback()}>
               ⇧
           </button>
-          <button className="down-button" onClick={() => moveTaskDownCallback()}>
+          <button
+              type="button"
+              aria-label="Move task down"
+              className="down-button"
+              onClick={() => moveTaskDownCallback()}>
               ⇩
           </button>
       </li>
