@@ -21,11 +21,12 @@ function TodoList() {
         setNewTaskText(event.target.value);
     }
 
-    function addTask() {
+    function addTask(event) {
         if (newTaskText.trim()) {
             setTasks(t => [...t, { id: self.crypto.randomUUID(), text:newTaskText}]);
             setNewTaskText('');
         }
+        event.preventDefault();
     }
 
     function deleteTask(id) {
@@ -50,21 +51,23 @@ function TodoList() {
     }
 
     return (
-        <div id="main">
+        <main>
             <h1>TODO</h1>
-            <div id="todo-input">
+            <form id="todo-input" onSubmit={addTask} aria-controls="todo-list">
                 <input
                     type="text"
+                    required
                     placeholder="Enter a task"
                     value={newTaskText}
+                    aria-label="Task text" 
                     onChange={handleInputChange} />
                 <button
                     className="add-button"
-                    onClick={addTask}>
+                    aria-label="Add task">
                     Add
                 </button>
-            </div>
-            <ol id="todo-list">
+            </form>
+            <ol aria-live="polite" id="todo-list">
                 {tasks.map((task, index) =>
                     <TodoItem
                         key={task.id}
@@ -75,7 +78,7 @@ function TodoList() {
                     />
                 )}
             </ol>
-        </div>
+        </main>
     );
 }
 
