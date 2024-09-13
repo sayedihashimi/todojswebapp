@@ -12,7 +12,7 @@
     color: #e0e0e0;
 }
 
-#todo-input {
+.todo-input {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.25rem;
