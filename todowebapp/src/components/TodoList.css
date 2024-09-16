@@ -46,7 +46,7 @@
     padding: 0;
 }
 
-#todo-list li {
+.todo-list li {
     display: flex;
     justify-content: space-between;
     align-items: center;
