@@ -51,37 +51,42 @@ function TodoList() {
     }
 
     return (
-        <article className="todo-list" aria-label="task list manager" aria-controls="todo-list">
-            <header>
-                <h1>TODO</h1>
-                <form className="todo-input" onSubmit={addTask}>
-                    <input
-                        type="text"
-                        required
-                        autoFocus
-                        placeholder="Enter a task"
-                        value={newTaskText}
-                        aria-label="Task text"
-                        onChange={handleInputChange} />
-                    <button
-                        className="add-button"
-                        aria-label="Add task">
-                        Add
-                    </button>
-                </form>
-            </header>
-            <ol aria-live="polite" aria-label="task list">
-                {tasks.map((task, index) =>
-                    <TodoItem
-                        key={task.id}
-                        task={task.text}
-                        deleteTaskCallback={() => deleteTask(task.id)}
-                        moveTaskUpCallback={() => moveTaskUp(index)}
-                        moveTaskDownCallback={()=>moveTaskDown(index)}
-                    />
-                )}
-            </ol>
-        </article>
+    <article
+        className="todo-list"
+        aria-label="task list manager">
+        <header>
+            <h1>TODO</h1>
+                <form
+                    className="todo-input"
+                    onSubmit={addTask}
+                    aria-controls="todo-list">
+                <input
+                    type="text"
+                    required
+                    autoFocus
+                    placeholder="Enter a task"
+                    value={newTaskText}
+                    aria-label="Task text"
+                    onChange={handleInputChange} />
+                <button
+                    className="add-button"
+                    aria-label="Add task">
+                    Add
+                </button>
+            </form>
+        </header>
+        <ol id="todo-list" aria-live="polite" aria-label="task list">
+            {tasks.map((task, index) =>
+                <TodoItem
+                    key={task.id}
+                    task={task.text}
+                    deleteTaskCallback={() => deleteTask(task.id)}
+                    moveTaskUpCallback={() => moveTaskUp(index)}
+                    moveTaskDownCallback={()=>moveTaskDown(index)}
+                />
+            )}
+        </ol>
+    </article>
     );
 }
 
